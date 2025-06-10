@@ -1,0 +1,165 @@
+/* General Body and Layout */
+body {
+    font-family: 'outfit', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/736x/ec/f2/57/ecf257e24648362b25563186975e7764.jpg');
+    background-repeat: repeat;
+    background-size: calc(100vw / 3) calc(100vh / 2); /* Creates a 3x2 grid */
+}
+
+/* Login Section */
+.login-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.144) ;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'outfit', sans-serif;
+    font-size: 24px;
+    color: #B97900;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: 'outfit', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.or-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.or-divider span {
+    font-size: 16px;
+    color: #666;
+    padding: 0 10px;
+
+}
+
+.or-divider::before, .or-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+   font-family: 'outfit', sans-serif;
+    text-align: left;
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 35px;
+    outline: none;
+    font-family: 'outfit',sans-serif;
+}
+
+input:focus {
+    border-color: #B97900;
+}
+
+.login-btn {
+    background-color: #B97900;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'outfit',sans-serif;
+}
+
+.login-btn:hover {
+    background-color: #B97900;
+}
+
+/* Google Sign-in Button Style */
+.g-signin2 {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px auto;
+}
+
+.auth-options {
+    font-family: 'outfit', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-options a {
+    color: #B97900;
+    text-decoration: none;
+}
+
+.auth-options a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    input, .login-btn {
+        font-size: 14px;
+    }
+}
