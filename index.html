@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blaze</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Link to external styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="Blaze Logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-android2" viewBox="0 0 16 16">
+                <path d="m10.213 1.471.691-1.26q.069-.124-.048-.192-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11.35.35 0 0 1-.263-.11.37.37 0 0 1-.107-.264.37.37 0 0 1 .107-.265.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11.37.37 0 0 1-.268-.11.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685 1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69.97.97 0 0 1-.707.284 1 1 0 0 1-.712-.284.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68"/>
+            </svg>
+        </a>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" aria-label="Toggle Navigation">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Navbar Links (Initially hidden on mobile) -->
+        <ul class="nav-links">
+            <li><a href="#about-us" class="nav-link">About Us</a></li>
+            <li><a href="" class="nav-link">Booking</a></li>
+            <li><a href="" class="nav-link">Add Property</a></li>
+            <li><a href="login.html" class="nav-link">Sign In</a></li>
+            <li><a href="" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+<!-- Start of Search Section -->
+<section class="hero-section">
+    <div class="hero-text">
+        <h1>Blaze Reality @Co.</h1>
+        <p>
+            Let’s find your dream house, shall we? <br>
+            Every brick counts, with film builds all guaranteed. <br>
+            We take you, family, friends, and neighbors to the next property level of ownership.
+        </p>
+        <button class="hero-button">Get a home</button>
+    </div>
+    <div class="hero-image">
+        <img class="hero-img" src="https://media.istockphoto.com/id/2104441611/photo/beautifully-remodelled-residential-home-in-pacific-northwest-waterfront-ocean-view-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=6Osq2TCnOP5r2a9KUNYq8wkBnNijlyOizzlb2bgURZQ=" alt="Blaze Reality">
+    </div>
+</section>
+<!-- End of Search Section -->
+
+
+<!-- Start of Search Section -->
+<section class="search-section">
+    <div class="search-container">
+        <!-- Search form -->
+        <form id="search-form" role="search" method="GET" action="#">
+            <!-- Location Dropdown -->
+            <select name="location" id="location" class="search-select" aria-label="Select Location">
+                <option value="">Select Location</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Mombasa">Mombasa</option>
+                <!-- Add other counties here -->
+            </select>
+            
+            <!-- Property Type Dropdown -->
+            <select name="property-type" id="property-type" class="search-select" aria-label="Select Property Type">
+                <option value="">Select Property Type</option>
+                <option value="rental">Rental</option>
+                <option value="permanent">Permanent Stay</option>
+                <option value="airbnb">Airbnb</option>
+                <option value="land">Land Purchase</option>
+                <option value="sale">Sale</option>
+            </select>
+            
+            <!-- Budget Input -->
+            <input 
+                type="number" 
+                name="budget" 
+                id="budget" 
+                placeholder="Budget (in Ksh)" 
+                class="search-input"
+                aria-label="Enter Budget"
+            >
+
+            <!-- Search Button -->
+            <button type="submit" class="search-btn">
+                Search
+            </button>
+        </form>
+    </div>
+</section>
+<!-- End of Search Section -->
+
+
+
+<!-- Start of About Us Section -->
+<section class="about-us-section" id="about-us">
+    <div class="about-us-container">
+        <!-- About Us Header -->
+        <h1>About Us</h1>
+        <h2>Meet our Team</h2>
+        <!-- About Us Content Section -->
+        <div class="about-content">
+            <!-- Meet Our Team Section (Displayed in one row horizontally) -->
+            <div class="team-section">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <img class="team-img" src="https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="James Karioki">
+                    <p><b>James Karioki,</b><br>General Manager</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <img class="team-img" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbnxlbnwwfHwwfHx8MA%3D%3D" alt="Peter Ongos">
+                    <p><b>Peter Ongos,</b><br>Accounts Terminator</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <img class="team-img" src="https://plus.unsplash.com/premium_photo-1661400600986-b7493240cae2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVufGVufDB8fDB8fHww" alt="Otiende Mangwaa">
+                    <p><b>Otiende Mangwaa,</b><br>Broker Guru</p>
+                </div>
+            </div>
+
+            <!-- What We Do and Who We Are Sections (Side by Side) -->
+            <div class="info-sections">
+                <!-- What We Do Section -->
+                <div class="info-section">
+                    <h3>What We Do</h3>
+
+                    <!-- Image for What We Do -->
+                    <div class="info-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8MA%3D%3D" alt="What We Do Image">
+                    </div>
+
+                    <!-- What We Do Text -->
+                    <p>Every day we offer our buildings and houses for free. <br>Get yours by telling us your favorite color and more!</p>
+                </div>
+
+                <!-- Who We Are Section -->
+                <div class="info-section">
+                    <h3>Who We Are</h3>
+
+                    <!-- Image for Who We Are -->
+                    <div class="info-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1661277695409-0cc85f3b8a00?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9hcmQlMjBtZWV0aW5nfGVufDB8fDB8fHww" alt="Who We Are Image">
+                    </div>
+
+                    <!-- Who We Are Text -->
+                    <p>We are a platform for sales, buying, renting, and leasing for landowners, free givers, and brokers. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Info Button -->
+        <button class="button-more-info">More Info</button>
+    </div>
+</section>
+<!-- End of About Us Section -->
+
+
+<!-- Start of Search Section -->
+<section class="property-listings-section">
+    <div class="section-header">
+        <h2>Property Listings</h2>
+        <p>Every building holds together bricks, safe for you and many more.</p>
+    </div>
+
+    <div class="listings-container">
+        <!-- Property Listing 1 -->
+        <div class="property-item">
+            <img class="property-img" src="https://images.unsplash.com/photo-1641657527573-aebd5661e699?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8M2QlMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt="property image 1">
+            <p>Homes available for you to take a view, search for more amazing sites.</p>
+            <button class="button-view-all">View All</button>
+        </div>
+
+        <!-- Property Listing 2 -->
+        <div class="property-item">
+            <img class="property-img" src="https://images.unsplash.com/photo-1542613741-0bc8abb1fd74?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEyOHxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8" alt="property image 2">
+            <p>Homes available for you to take a view, search for more amazing sites.</p>
+            <button class="button-get-home">Get a Home</button>
+        </div>
+
+        <!-- Property Listing 3 -->
+        <div class="property-item">
+            <img class="property-img" src="https://plus.unsplash.com/premium_photo-1727456098472-d1d43fe21c5e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEzOHxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8" alt="property image 3">
+            <p>Rentals available for you to take a view, search for more amazing sites.</p>
+            <button class="button-view-sales">View Sales</button>
+        </div>
+
+        <!-- Property Listing 4 -->
+        <div class="property-item">
+            <img class="property-img" src="https://images.unsplash.com/photo-1740021838495-591f6a2d97fa?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0M3xNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8" alt="property image 4">
+            <p>Rentals available for you to take a view, search for more amazing sites.</p>
+            <button class="button-get-rentals">Get Rentals</button>
+        </div>
+    </div>
+</section>
+<!-- End of Search Section -->
+
+<!-- Start of Search Section -->
+<section class="property-tours">
+
+    <!-- Property Tour 1 -->
+    <div class="tour-item">
+        <h2>Visit Properties Close to You</h2>
+        <img class="tour-image" src="https://images.unsplash.com/photo-1739907548147-f991baedfd5e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0NnxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8" alt="loading...">
+        <p>Explore properties in your area. Virtual tours are also available!</p>
+    </div>
+
+    <!-- Property Tour 2 -->
+    <div class="tour-item">
+        <h2>Go Beyond Your Borders</h2>
+        <img class="tour-image" src="https://images.unsplash.com/photo-1739382120576-b1434e8bc4d3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE2MnxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8" alt="loading...">
+        <p>View properties across different locations, and book a tour for the one you love.</p>
+    </div>
+
+    <!-- Property Tour 3 -->
+    <div class="tour-item">
+        <h2>Just Where You Are, See It</h2>
+        <img class="tour-image" src="https://images.unsplash.com/photo-1739907548147-f991baedfd5e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE0NnxNOGpWYkxiVFJ3c3x8ZW58MHx8fHx8" alt="loading...">
+        <p>Take a virtual tour from the comfort of your home and explore properties worldwide.</p>
+    </div>
+
+    <button class="view-all-button">See It All</button>
+</section>
+<!-- End of Search Section -->
+
+<!-- Start of Search Section -->
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-wrapper">
+        <!-- Navigation buttons -->
+        <button class="prev-btn">&#10094;</button>
+        
+        <!-- Testimonial Container -->
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Client 1">
+                </div>
+                <div class="testimonial-text">
+                    <p>"This company helped us find the home of our dreams. Excellent service!"</p>
+                    <strong>John Doe</strong><br>
+                    <span>Real Estate Agent</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Client 2">
+                </div>
+                <div class="testimonial-text">
+                    <p>"A fantastic experience! Highly recommend their services for first-time homebuyers."</p>
+                    <strong>Jane Smith</strong><br>
+                    <span>Engineer</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Client 3">
+                </div>
+                <div class="testimonial-text">
+                    <p>"Couldn't be happier with my new apartment. Thank you for the great service!"</p>
+                    <strong>Mark Taylor</strong><br>
+                    <span>Designer</span>
+                </div>
+            </div>
+            <!-- Add more testimonials here as needed -->
+        </div>
+
+        <!-- Navigation buttons -->
+        <button class="next-btn">&#10095;</button>
+    </div>
+</section>
+<!-- End of Search Section -->
+
+<!-- Start of Search Section -->
+<section class="blog-section">
+    <!-- Blog Header -->
+    <h1>Latest from the Blog</h1>
+
+    <div class="blog-posts">
+        <!-- First Blog Post -->
+        <div class="blog-post">
+            <h3>Mind-Blowing Discoveries</h3>
+            <img class="blog-image" src="https://media.istockphoto.com/id/2110310187/photo/luxury-tropical-pool-villa-at-dusk.webp?a=1&b=1&s=612x612&w=0&k=20&c=3wDvy4YueLfVHI9Kycl7J-nYKJsxiJL1rpBQ-ZS0hTI=" alt="Luxury Villa">
+            <p class="blog-description">Discover areas you've never visited before. Stay tuned for updates and amazing experiences.</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <!-- Second Blog Post -->
+        <div class="blog-post">
+            <h3>Crazy Tips for Property Buyers</h3>
+            <img class="blog-image" src="https://images.unsplash.com/photo-1748069036569-9b2d76ea7059?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfHhIeFlUTUhMZ09jfHxlbnwwfHx8fHw%3D" alt="Modern Homes">
+            <p class="blog-description">A new release by Tesxale, featuring fully finished homes and luxurious rentals for Airbnb. Get the tips now!</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+
+        <!-- Third Blog Post -->
+        <div class="blog-post">
+            <h3>What's Out There in the Market?</h3>
+            <img class="blog-image" src="https://images.unsplash.com/photo-1748324687716-022bec19fe9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEzfHhIeFlUTUhMZ09jfHxlbnwwfHx8fHw%3D" alt="Property Listings">
+            <p class="blog-description">The market is heating up! Fully furnished homes and rentals are trending. Here's everything you need to know.</p>
+            <a href="#" class="read-more">Read more</a>
+        </div>
+    </div>
+
+    <!-- Subscription Call to Action -->
+    <div class="subscribe-section">
+        <p>Get free tips and property management advice directly to your inbox!</p>
+        <button class="button-subscribe">Subscribe Now</button>
+    </div>
+</section>
+
+<!-- Comment Section Card -->
+<section class="comment-section">
+    <h3>Share Your Thoughts</h3>
+    <div class="comment-card">
+        <textarea class="comment-input" placeholder="Write a comment..."></textarea>
+        <button class="submit-comment">Post Comment</button>
+    </div>
+
+    <div class="comments-display">
+        <!-- Example Comment -->
+        <div class="comment">
+            <p><strong>John Doe:</strong> This is an amazing blog! I really love the tips you've shared. Keep up the great work!</p>
+        </div>
+        <!-- Add more dynamic comments here when implementing backend -->
+    </div>
+</section>
+<!-- End of Search Section -->
+
+<footer>
+    <div class="footer-container">
+        <!-- Quick Links Section -->
+        <div class="footer-section">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Bookings</a></li>
+                <li><a href="#">Latest News</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+
+        <!-- Pages Section -->
+        <div class="footer-section">
+            <h2>Pages</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Rentals</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </div>
+
+        <!-- Contacts Section -->
+        <div class="footer-section">
+            <h2>Contacts</h2>
+            <ul>
+                <li><a href="mailto:info@company.com">Email Us</a></li>
+                <li><a href="#">Call Us: +123 456 7890</a></li>
+                <li><a href="#">Live Chat</a></li>
+                <li><a href="#">Office Location</a></li>
+                <li><a href="#">Social Media</a></li>
+            </ul>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 UniverseDisplayHits. All Rights Reserved.</p>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Policies</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>  
