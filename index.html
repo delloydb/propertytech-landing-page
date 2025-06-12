@@ -32,9 +32,9 @@
         <ul class="nav-links">
             <li><a href="#about-us" class="nav-link">About Us</a></li>
             <li><a href="" class="nav-link">Booking</a></li>
-            <li><a href="" class="nav-link">Add Property</a></li>
             <li><a href="login.html" class="nav-link" target="_blank">Sign In</a></li>
-            <li><a href="" class="nav-link">Contact</a></li>
+            <li><a href="" class="nav-link">Contact Us</a></li>
+            <li><a href="" class="nav-button">Add Property</a></li>
         </ul>
     </nav>
 
@@ -58,17 +58,17 @@
 
 <!-- Start of Search Section -->
 <section class="search-section">
+    <!-- Search container holds all the input fields and button -->
     <div class="search-container">
-        <!-- Search form -->
-        <form id="search-form" role="search" method="GET" action="#">
+        <!-- Search form aligned in one line -->
+        <form id="search-form" role="search" method="GET" action="#" class="search-form">
             <!-- Location Dropdown -->
             <select name="location" id="location" class="search-select" aria-label="Select Location">
                 <option value="">Select Location</option>
                 <option value="Nairobi">Nairobi</option>
                 <option value="Mombasa">Mombasa</option>
-                <!-- Add other counties here -->
             </select>
-            
+
             <!-- Property Type Dropdown -->
             <select name="property-type" id="property-type" class="search-select" aria-label="Select Property Type">
                 <option value="">Select Property Type</option>
@@ -78,16 +78,16 @@
                 <option value="land">Land Purchase</option>
                 <option value="sale">Sale</option>
             </select>
-            
-            <!-- Budget Input -->
-            <input 
-                type="number" 
-                name="budget" 
-                id="budget" 
-                placeholder="Budget (in Ksh)" 
-                class="search-input"
-                aria-label="Enter Budget"
-            >
+
+            <!-- Budget Dropdown -->
+            <select name="budget" id="budget" class="search-select" aria-label="Select Budget Range">
+                <option value="">Select Budget Range</option>
+                <option value="10-50">10,000-50,000</option>
+                <option value="50-100">50,000-100,000</option>
+                <option value="100-200">100,000-200,000</option>
+                <option value="200-300">200,000-300,000</option>
+                <option value="300-500">300,000-500,000</option>
+            </select>
 
             <!-- Search Button -->
             <button type="submit" class="search-btn">
@@ -97,6 +97,7 @@
     </div>
 </section>
 <!-- End of Search Section -->
+
 
 
 
