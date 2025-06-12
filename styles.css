@@ -17,8 +17,10 @@ body {
 /* Navbar Styles */
 .navbar {
     display: flex; /* Use Flexbox for horizontal layout */
-    justify-content: space-between; /* Space out child elements to edges */
-    align-items: center; /* Vertically center child elements */
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 2%;
     padding: 1rem 2rem; /* Add spacing inside navbar: top/bottom 1rem, sides 2rem */
     background-color: #0F0B09; /* Fully transparent background (no color) */
     background-image: none; /* Ensure no background image is applied */
@@ -36,6 +38,8 @@ body {
 .navbar .logo svg {
     width: 40px;
     height: 40px;
+    margin-left: 30px; /* Adjust spacing between logo and nav links */
+
 }
 
 /* Navbar Links (Desktop View) */
@@ -45,18 +49,43 @@ body {
 }
 
 .nav-link {
-    margin: 0 1rem;
+    text-decoration: none;    /* Remove underline from logo */
+    margin: 0 0.5rem;
     padding: 0.5rem;
     color: #B97900;
-    text-transform: uppercase;
     font-size: 1rem;
 }
 
+.nav-button {
+    margin-left: 150px;
+    margin-right: 60px;
+    font-family: 'outfit', sans-serif;
+    background-color: #B97900; /* Gold background color */
+    color: white; /* White text color */
+    font-size: 1.2rem; /* Set font size for the button */
+    padding: 10px 15px; /* Add padding for top/bottom and left/right */
+    border: none; /* Remove default border */
+    border-radius: 35px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+  color: white;
+  text-decoration: none; /* ensure underline stays off */
+}
+
+.nav-button:hover {
+    color: #0F0B09;
+    background-color: #B88C1A; /* Change background to black on hover */
+}
 /* Hamburger Menu for Mobile */
 .hamburger-menu {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 30px;
     height: 21px;
     cursor: pointer;
@@ -197,88 +226,104 @@ body {
     }
 }
 
-/* General Styles for the Search Section */
+/* ================================
+   General Styles for Search Section
+   ================================ */
 .search-section {
-    padding: 20px;
-    background-color: #0F0B09; /* White background for clarity */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Center all content vertically */
- /* Full height of the screen     height: 100vh;*/
-    text-align: center;
-    font-family: 'outfit', sans-serif;
+    padding: 20px; /* Add spacing around the section */
+    background-color: #0F0B09; /* Dark background color */
+    display: flex; /* Flex layout to center contents */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center-align text */
+    font-family: 'outfit', sans-serif; /* Use Outfit font */
 }
 
-/* Styles for the Search Container */
+/* ================================
+   Container for Search Bar/Form
+   ================================ */
 .search-container {
-    display: flex; /* Use Flexbox to arrange the fields in a row */
-    justify-content: space-between; /* Space out input fields and button */
-    align-items: center; /* Center align items vertically */
-    width: 100%;
-    max-width: 750px; /* Max width for a clean layout */
-    background-color: #B97900; /* White background for the form */
-    padding: 10px; /* Padding around the container */
-    border-radius: 35px; /* Rounded corners for the form */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
-
-/* Styles for Select Inputs */
-.search-select {
-    width: 30%; /* Make each select box take up 30% of the container */
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #B97900; /* Black border */
-    border-radius: 1px;
-    background-color: #B97900; /* White background for the select box */
-    color: #ffffff; /* Black text */
-    margin-right: 10px; /* Space between selects */
-    font-family: 'outfit', sans-serif;
-}
-
-/* Styles for the Budget Input */
-.search-input {
-    width: 20%; /* Budget input takes up 20% of the container width */
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #B97900; /* Black border */
-    border-radius: 4px;
-    background-color: #B97900; /* White background */
-    color: #ffffff; /* Black text */
-    margin-right: 5px; /* Space between input and button */
-}
-
-/* Styles for the Search Button */
-.search-btn {
-    padding: 10px 20px; /* Button padding */
-    font-size: 1.2rem; /* Font size for button */
-    background-color: #FF6A32; /* Black background */
-    color: #000000; /* White text */
-    border: none; /* Remove default border */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Vertically align form */
+    width: 100%; /* Full width of parent */
+    max-width: 900px; /* Limit the width on larger screens */
+    background-color: #B97900; /* Orange/golden background */
+    padding: 10px; /* Padding inside the container */
     border-radius: 35px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* ================================
+   Search Form Layout (Row)
+   ================================ */
+.search-form {
+    display: flex; /* Arrange form fields in a row */
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    width: 100%; /* Full width inside container */
+    gap: 10px; /* Add spacing between selects and button */
+}
+
+/* ================================
+   Dropdown Select Inputs
+   ================================ */
+.search-select {
+    width: 30%; /* Each select takes 30% width of the form */
+    padding: 10px; /* Inner spacing */
+    font-size: 1rem; /* Standard font size */
+    border: 1px solid #B97900; /* Border color to match background */
+    border-radius: 1px; /* Slightly rounded border */
+    background-color: #B97900; /* Background same as container */
+    color: #ffffff; /* White text */
+    font-family: 'outfit', sans-serif; /* Font consistency */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* ================================
+   Hover Effect for Dropdowns
+   ================================ */
+.search-select:hover {
+    color: #000000; /* Keep text white on hover */
+}
+
+/* ================================
+   Search Button Styles
+   ================================ */
+.search-btn {
+    padding: 10px 20px; /* Padding for height and width */
+    font-size: 1.2rem; /* Larger readable text */
+    background-color: #FF6A32; /* Orange background */
+    color: #000000; /* Black text */
+    border: none; /* No border */
+    border-radius: 35px; /* Rounded button */
     cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    white-space: nowrap; /* Prevent text from wrapping */
+    margin-right: 10px;
 }
 
-/* Hover effect for the button */
+/* ================================
+   Hover Effect for Search Button
+   ================================ */
 .search-btn:hover {
-    background-color: #ffffff; /* Gold color on hover */
+    background-color: #B97900; /* Gold color on hover */
+    color: #ffffff; /* Turn text white on hover */
 }
 
-/* Responsive Design for Tablets and Small Screens */
+/* ================================
+   Responsive Design - Small Screens
+   ================================ */
 @media (max-width: 768px) {
-    .search-container {
-        flex-direction: column; /* Stack inputs vertically on small screens */
-        align-items: center; /* Center align inputs and button */
-        width: 80%; /* Reduce width for better mobile layout */
+    .search-form {
+        flex-direction: column; /* Stack form fields vertically */
+        gap: 10px; /* Add spacing between items */
     }
 
-    /* Adjust width for smaller screens */
     .search-select,
-    .search-input,
     .search-btn {
-        width: 100%; /* Make inputs and button full width on small screens */
-        margin-bottom: 10px; /* Add space between elements */
+        width: 100%; /* Full width for mobile */
     }
 }
 
@@ -407,7 +452,7 @@ body {
 
 /* Button Hover Effect */
 .button-more-info:hover {
-    background-color: #FF6A32;   /* Darker gold on hover */
+    background-color: #B88C1A;   /* Darker gold on hover */
 }
 
 
