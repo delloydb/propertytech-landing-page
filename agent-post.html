@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Johnson | Your Real Estate</title>
+    <link rel="stylesheet" href="agent-profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="agent-profile-container">
+        <!-- Agent Header Section -->
+        <header class="agent-header">
+            <div class="container">
+                <div class="agent-basic-info">
+                    <div class="agent-photo">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sarah Johnson">
+                    </div>
+                    <div class="agent-details">
+                        <h1>Sarah Johnson</h1>
+                        <div class="agent-title">Senior Real Estate Agent</div>
+                        <div class="agent-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="agent-stats">
+                        <div class="stat">
+                            <div class="stat-value">12+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">$45M+</div>
+                            <div class="stat-label">Total Sales</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="agent-main">
+            <div class="container">
+                <div class="agent-content">
+                    <!-- Left Column -->
+                    <div class="left-column">
+                        <!-- About Section -->
+                        <section class="about-section">
+                            <h2>About Sarah</h2>
+                            <p>Sarah Johnson is a top-performing real estate agent specializing in luxury properties in the downtown area. With over 12 years of experience, Sarah has helped hundreds of clients find their dream homes or sell their properties for maximum value.</p>
+                            <p>Her deep knowledge of the local market, attention to detail, and commitment to client satisfaction have earned her numerous awards and a reputation as one of the most trusted agents in the city. Sarah takes pride in providing personalized service tailored to each client's unique needs.</p>
+                        </section>
+
+                        <!-- Specializations Section -->
+                        <section class="specializations-section">
+                            <h2>Specializations</h2>
+                            <div class="specializations-grid">
+                                <div class="specialization">
+                                    <i class="fas fa-home"></i>
+                                    <h3>Luxury Homes</h3>
+                                    <p>Expert in high-end residential properties with premium amenities</p>
+                                </div>
+                                <div class="specialization">
+                                    <i class="fas fa-building"></i>
+                                    <h3>Downtown Condos</h3>
+                                    <p>Specialized knowledge of the downtown condo market</p>
+                                </div>
+                                <div class="specialization">
+                                    <i class="fas fa-umbrella-beach"></i>
+                                    <h3>Vacation Properties</h3>
+                                    <p>Helping clients find perfect vacation homes and investment properties</p>
+                                </div>
+                                <div class="specialization">
+                                    <i class="fas fa-people-arrows"></i>
+                                    <h3>Relocation Services</h3>
+                                    <p>Comprehensive assistance for clients moving to the area</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Testimonials Section -->
+                        <section class="testimonials-section">
+                            <h2>Client Testimonials</h2>
+                            <div class="testimonials-carousel" id="testimonials-carousel">
+                                <!-- Testimonials will be loaded here dynamically -->
+                            </div>
+                            <div class="carousel-controls">
+                                <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                                <div class="carousel-dots"></div>
+                                <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="right-column">
+                        <!-- Contact Form -->
+                        <section class="contact-form-section">
+                            <h2>Contact Sarah</h2>
+                            <form id="agent-contact-form">
+                                <div class="form-group">
+                                    <label for="name">Your Name*</label>
+                                    <input type="text" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email*</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message*</label>
+                                    <textarea id="message" rows="5" required>I'm interested in learning more about your services. Please contact me.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="interest">I'm interested in:</label>
+                                    <select id="interest">
+                                        <option value="buying">Buying a property</option>
+                                        <option value="selling">Selling a property</option>
+                                        <option value="both">Buying and selling</option>
+                                        <option value="consultation">Consultation</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
+                            <div class="direct-contact">
+                                <h3>Or contact directly:</h3>
+                                <div class="contact-method">
+                                    <i class="fas fa-phone"></i>
+                                    <span>(555) 123-4567</span>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>sarah@realestate.com</span>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>123 Realtor Ave, Suite 200, Downtown</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Current Listings -->
+                        <section class="listings-section">
+                            <h2>Current Listings</h2>
+                            <div class="listings-grid" id="listings-grid">
+                                <!-- Listings will be loaded here dynamically -->
+                            </div>
+                            <a href="properties.html?agent=sarah-johnson" class="view-all">View All Listings</a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="agent-profile.js"></script>
+</body>
+</html>
