@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Properties | Your Real Estate</title>
+    <link rel="stylesheet" href="properties.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-fire"></i> Blaze Reality
+            </a>
+            
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Account <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="submit-property.html" class="nav-button">Submit Property</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <div class="container">
+            <h1>Available Properties</h1>
+            <nav class="breadcrumbs">
+                <a href="index.html">Home</a> &gt; <span>Properties</span>
+            </nav>
+        </div>
+    </header>
 
+    <main class="properties-main">
+        <div class="container">
+            <div class="filter-sort-section">
+                <button class="filter-toggle">Filters <i class="fas fa-sliders-h"></i></button>
+                
+                <div class="advanced-filters">
+                    <div class="filter-group">
+                        <label for="location">Location</label>
+                        <select id="location">
+                            <option value="">Any Location</option>
+                            <option value="downtown">Downtown</option>
+                            <option value="suburbs">Suburbs</option>
+                            <option value="rural">Rural</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="price-range">Price Range</label>
+                        <input type="range" id="price-range" min="0" max="2000000" step="50000" value="1000000">
+                        <div class="price-display">Up to: $<span id="price-value">1,000,000</span></div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="bedrooms">Bedrooms</label>
+                        <select id="bedrooms">
+                            <option value="">Any</option>
+                            <option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type">
+                            <option value="">Any Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="land">Land</option>
+                        </select>
+                    </div>
+                    
+                    <button class="apply-filters">Apply Filters</button>
+                    <button class="reset-filters">Reset</button>
+                </div>
+                
+                <div class="sort-options">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="featured">Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+                
+                <div class="view-toggle">
+                    <button class="grid-view active" title="Grid View"><i class="fas fa-th"></i></button>
+                    <button class="map-view" title="Map View"><i class="fas fa-map-marked-alt"></i></button>
+                </div>
+            </div>
+            
+            <div class="properties-container">
+                <div class="property-grid" id="property-grid">
+                    <!-- Property listings will be dynamically inserted here -->
+                </div>
+                
+                <div class="property-map" id="property-map" style="display: none;">
+                    <!-- Map will be rendered here -->
+                </div>
+                
+                <div class="pagination">
+                    <button class="prev-page" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                    <div class="page-numbers">
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <span>...</span>
+                        <button>5</button>
+                    </div>
+                    <button class="next-page">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Can't find what you need?</h2>
+            <p>Our agents can help you find the perfect property that matches all your criteria.</p>
+            <button class="cta-button">Contact an Agent</button>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Blaze Reality</h3>
+                    <p>Your trusted partner in finding the perfect property. We connect buyers, sellers, and renters with their ideal real estate solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul>
+                        <li><a href="properties.html?type=house">Houses</a></li>
+                        <li><a href="properties.html?type=apartment">Apartments</a></li>
+                        <li><a href="properties.html?type=villa">Villas</a></li>
+                        <li><a href="properties.html?type=commercial">Commercial</a></li>
+                        <li><a href="properties.html?type=land">Land</a></li>
+                        <li><a href="properties.html?type=luxury">Luxury Homes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone-alt"></i> +254 700 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@blazereality.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Blaze Reality. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="properties.js"></script>
+</body>
+</html> 
