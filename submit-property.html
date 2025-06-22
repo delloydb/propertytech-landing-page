@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Property | CityScape Properties</title>
+    <link rel="stylesheet" href="submit-property.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-fire"></i> Blaze Reality
+            </a>
+            
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Account <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="submit-property.html" class="nav-button">Submit Property</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="submit-property-main">
+        <div class="container">
+            <div class="submission-header">
+                <h1>List Your Property With Us</h1>
+                <p>Fill out the form below to submit your property listing. Our team will review your submission and contact you within 24 hours.</p>
+            </div>
+
+            <div class="submission-guidelines">
+                <h2><i class="fas fa-info-circle"></i> Submission Guidelines</h2>
+                <ul>
+                    <li>All fields marked with <span class="required">*</span> are required</li>
+                    <li>Provide accurate and detailed information about your property</li>
+                    <li>Upload high-quality photos (minimum 5, maximum 20)</li>
+                    <li>Video walkthroughs increase engagement by 40%</li>
+                    <li>Listings are reviewed within 24 hours of submission</li>
+                    <li>There is no fee for standard listings</li>
+                </ul>
+            </div>
+
+            <form id="propertyForm" class="property-form">
+                <!-- Progress Indicator -->
+                <div class="form-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Basic Info</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Details</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Amenities</span>
+                        </div>
+                        <div class="step" data-step="4">
+                            <span class="step-number">4</span>
+                            <span class="step-label">Media</span>
+                        </div>
+                        <div class="step" data-step="5">
+                            <span class="step-number">5</span>
+                            <span class="step-label">Contact</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Basic Information -->
+                <div class="form-step active" data-step="1">
+                    <h2>Basic Property Information</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="propertyType">Property Type <span class="required">*</span></label>
+                            <select id="propertyType" name="propertyType" required>
+                                <option value="">Select property type</option>
+                                <option value="single-family">Single Family Home</option>
+                                <option value="condo">Condo/Apartment</option>
+                                <option value="townhouse">Townhouse</option>
+                                <option value="multi-family">Multi-Family</option>
+                                <option value="land">Land</option>
+                                <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="listingType">Listing Type <span class="required">*</span></label>
+                            <select id="listingType" name="listingType" required>
+                                <option value="">Select listing type</option>
+                                <option value="sale">For Sale</option>
+                                <option value="rent">For Rent</option>
+                                <option value="lease">For Lease</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Price <span class="required">*</span></label>
+                            <div class="input-with-symbol">
+                                <span class="symbol">$</span>
+                                <input type="number" id="price" name="price" min="0" step="1000" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sqft">Square Feet</label>
+                            <div class="input-with-symbol">
+                                <input type="number" id="sqft" name="sqft" min="0">
+                                <span class="symbol">sqft</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Address <span class="required">*</span></label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City <span class="required">*</span></label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="state">State <span class="required">*</span></label>
+                            <select id="state" name="state" required>
+                                <option value="">Select state</option>
+                                <!-- States would be populated here -->
+                                <option value="CA">California</option>
+                                <option value="NY">New York</option>
+                                <!-- More states... -->
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="zip">ZIP Code <span class="required">*</span></label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="headline">Headline <span class="required">*</span></label>
+                        <input type="text" id="headline" name="headline" placeholder="e.g., Beautiful 3-Bedroom Home in Quiet Neighborhood" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description <span class="required">*</span></label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-next" data-next="2">Next: Property Details</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Property Details -->
+                <div class="form-step" data-step="2">
+                    <h2>Property Details</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bedrooms">Bedrooms <span class="required">*</span></label>
+                            <select id="bedrooms" name="bedrooms" required>
+                                <option value="">Select</option>
+                                <option value="0">0 (Studio)</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5+">5+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="bathrooms">Bathrooms <span class="required">*</span></label>
+                            <select id="bathrooms" name="bathrooms" required>
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3+">3+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="yearBuilt">Year Built</label>
+                            <input type="number" id="yearBuilt" name="yearBuilt" min="1800" max="2025">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="floors">Floors</label>
+                            <select id="floors" name="floors">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4+">4+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="garage">Garage Spaces</label>
+                            <select id="garage" name="garage">
+                                <option value="">Select</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3+">3+</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lotSize">Lot Size</label>
+                        <div class="input-with-symbol">
+                            <input type="number" id="lotSize" name="lotSize" min="0">
+                            <span class="symbol">sqft</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Property Condition</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="condition" value="excellent">
+                                <span class="radio-label">Excellent</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="condition" value="good" checked>
+                                <span class="radio-label">Good</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="condition" value="fair">
+                                <span class="radio-label">Fair</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="condition" value="needs-work">
+                                <span class="radio-label">Needs Work</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" data-prev="1">Back</button>
+                        <button type="button" class="btn btn-next" data-next="3">Next: Amenities</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Amenities -->
+                <div class="form-step" data-step="3">
+                    <h2>Property Amenities</h2>
+                    <p class="step-description">Select all amenities that apply to your property.</p>
+                    
+                    <div class="amenities-grid">
+                        <div class="amenity-category">
+                            <h3>Interior Features</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="central-air">
+                                    <span class="checkmark"></span>
+                                    Central Air
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="fireplace">
+                                    <span class="checkmark"></span>
+                                    Fireplace
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="hardwood-floors">
+                                    <span class="checkmark"></span>
+                                    Hardwood Floors
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="walk-in-closet">
+                                    <span class="checkmark"></span>
+                                    Walk-in Closet
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="vaulted-ceilings">
+                                    <span class="checkmark"></span>
+                                    Vaulted Ceilings
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="amenity-category">
+                            <h3>Kitchen Features</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="granite-countertops">
+                                    <span class="checkmark"></span>
+                                    Granite Countertops
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="stainless-steel-appliances">
+                                    <span class="checkmark"></span>
+                                    Stainless Steel Appliances
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="island">
+                                    <span class="checkmark"></span>
+                                    Island
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="pantry">
+                                    <span class="checkmark"></span>
+                                    Pantry
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="amenity-category">
+                            <h3>Exterior Features</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="deck">
+                                    <span class="checkmark"></span>
+                                    Deck/Patio
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="fenced-yard">
+                                    <span class="checkmark"></span>
+                                    Fenced Yard
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="pool">
+                                    <span class="checkmark"></span>
+                                    Pool
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="garden">
+                                    <span class="checkmark"></span>
+                                    Garden
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="amenity-category">
+                            <h3>Community Features</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="gated-community">
+                                    <span class="checkmark"></span>
+                                    Gated Community
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="security-system">
+                                    <span class="checkmark"></span>
+                                    Security System
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="fitness-center">
+                                    <span class="checkmark"></span>
+                                    Fitness Center
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" name="amenities[]" value="playground">
+                                    <span class="checkmark"></span>
+                                    Playground
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalAmenities">Additional Amenities</label>
+                        <textarea id="additionalAmenities" name="additionalAmenities" rows="3" placeholder="List any other notable features not mentioned above"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" data-prev="2">Back</button>
+                        <button type="button" class="btn btn-next" data-next="4">Next: Media</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Media Upload -->
+                <div class="form-step" data-step="4">
+                    <h2>Property Media</h2>
+                    <p class="step-description">Upload high-quality photos and videos of your property. Minimum 5 photos required.</p>
+                    
+                    <div class="media-upload-container">
+                        <div class="upload-instructions">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h3>Drag & Drop Files Here</h3>
+                            <p>or</p>
+                            <button type="button" class="btn btn-browse" id="browseFiles">Browse Files</button>
+                            <p class="file-requirements">Accepted formats: JPG, PNG (max 10MB each). Videos: MP4 (max 100MB).</p>
+                        </div>
+                        
+                        <div class="dropzone" id="propertyMediaDropzone"></div>
+                        
+                        <div class="upload-preview" id="uploadPreview">
+                            <h3>Uploaded Media</h3>
+                            <div class="preview-grid" id="previewGrid">
+                                <!-- Files will be previewed here -->
+                                <div class="no-files">
+                                    <i class="far fa-images"></i>
+                                    <p>No files uploaded yet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="videoTour">Video Tour URL (YouTube, Vimeo, etc.)</label>
+                        <input type="url" id="videoTour" name="videoTour" placeholder="https://">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" data-prev="3">Back</button>
+                        <button type="button" class="btn btn-next" data-next="5">Next: Contact Info</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Contact Information -->
+                <div class="form-step" data-step="5">
+                    <h2>Contact Information</h2>
+                    <p class="step-description">Provide your contact details so potential buyers can reach you.</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email <span class="required">*</span></label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactPhone">Phone <span class="required">*</span></label>
+                            <input type="tel" id="contactPhone" name="contactPhone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone2">Alternate Phone</label>
+                            <input type="tel" id="contactPhone2" name="contactPhone2">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMethod">Preferred Contact Method</label>
+                        <select id="contactMethod" name="contactMethod">
+                            <option value="any">Any Method</option>
+                            <option value="phone">Phone Call</option>
+                            <option value="text">Text Message</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="availability">Best Time to Contact</label>
+                        <select id="availability" name="availability">
+                            <option value="anytime">Anytime</option>
+                            <option value="morning">Mornings (8AM-12PM)</option>
+                            <option value="afternoon">Afternoons (12PM-5PM)</option>
+                            <option value="evening">Evenings (5PM-9PM)</option>
+                            <option value="weekends">Weekends Only</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalInfo">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" rows="3" placeholder="Any special instructions for potential buyers"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" data-prev="4">Back</button>
+                        <button type="button" class="btn btn-save-draft">Save Draft</button>
+                        <button type="submit" class="btn btn-submit">Submit Property</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Blaze Reality</h3>
+                    <p>Your trusted partner in finding the perfect property. We connect buyers, sellers, and renters with their ideal real estate solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul>
+                        <li><a href="properties.html?type=house">Houses</a></li>
+                        <li><a href="properties.html?type=apartment">Apartments</a></li>
+                        <li><a href="properties.html?type=villa">Villas</a></li>
+                        <li><a href="properties.html?type=commercial">Commercial</a></li>
+                        <li><a href="properties.html?type=land">Land</a></li>
+                        <li><a href="properties.html?type=luxury">Luxury Homes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone-alt"></i> +254 700 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@blazereality.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Blaze Reality. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="submit-property.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
