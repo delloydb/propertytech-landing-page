@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Downtown Apartment | Your Real Estate</title>
+    <link rel="stylesheet" href="property-details.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.1.0/css/lightgallery-bundle.min.css">
+</head>
+<body>
+        <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-fire"></i> Blaze Reality
+            </a>
+            
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Account <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="submit-property.html" class="nav-button">Submit Property</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <div class="container">
+            <h1>Modern Downtown Apartment</h1>
+            <nav class="breadcrumbs">
+                <a href="index.html">Home</a> &gt; 
+                <a href="properties.html">Properties</a> &gt; 
+                <span>Modern Downtown Apartment</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="property-details">
+        <div class="container">
+            <!-- Image Gallery -->
+            <section class="gallery-section">
+                <div class="main-image" id="main-image">
+                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Modern Downtown Apartment">
+                    <span class="property-badge">Featured</span>
+                </div>
+                <div class="thumbnail-gallery" id="thumbnail-gallery">
+                    <div class="thumbnail active" data-large="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Living Room">
+                    </div>
+                    <div class="thumbnail" data-large="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Kitchen">
+                    </div>
+                    <div class="thumbnail" data-large="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bedroom">
+                    </div>
+                    <div class="thumbnail" data-large="https://images.unsplash.com/photo-1583845112203-454c1b0f9a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+                        <img src="https://images.unsplash.com/photo-1583845112203-454c1b0f9a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bathroom">
+                    </div>
+                    <div class="thumbnail" data-large="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="View">
+                    </div>
+                </div>
+                <button class="view-gallery" id="view-gallery">View Full Gallery <i class="fas fa-expand"></i></button>
+            </section>
+
+            <div class="details-container">
+                <div class="left-column">
+                    <!-- Basic Info -->
+                    <section class="basic-info">
+                        <div class="price">$450,000</div>
+                        <div class="address"><i class="fas fa-map-marker-alt"></i> 123 Main St, Downtown, City</div>
+                        <div class="specs">
+                            <span><i class="fas fa-bed"></i> 2 Bedrooms</span>
+                            <span><i class="fas fa-bath"></i> 2 Bathrooms</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1,200 sqft</span>
+                            <span><i class="fas fa-building"></i> Apartment</span>
+                        </div>
+                    </section>
+
+                    <!-- Description -->
+                    <section class="description">
+                        <h2>Property Description</h2>
+                        <p>This beautiful modern apartment is located in the heart of downtown, offering stunning city views and convenient access to all amenities. The open-concept living area features floor-to-ceiling windows that flood the space with natural light.</p>
+                        <p>The gourmet kitchen comes equipped with stainless steel appliances, quartz countertops, and a spacious island. The master bedroom includes a walk-in closet and ensuite bathroom with heated floors. Building amenities include a fitness center, rooftop terrace, and 24/7 concierge service.</p>
+                    </section>
+
+                    <!-- Amenities -->
+                    <section class="amenities">
+                        <h2>Amenities</h2>
+                        <div class="amenities-grid">
+                            <div class="amenity"><i class="fas fa-wifi"></i> High-Speed Internet</div>
+                            <div class="amenity"><i class="fas fa-thermometer-three-quarters"></i> Central Air</div>
+                            <div class="amenity"><i class="fas fa-car"></i> Parking Space</div>
+                            <div class="amenity"><i class="fas fa-dumbbell"></i> Fitness Center</div>
+                            <div class="amenity"><i class="fas fa-swimming-pool"></i> Swimming Pool</div>
+                            <div class="amenity"><i class="fas fa-door-open"></i> Doorman</div>
+                            <div class="amenity"><i class="fas fa-tshirt"></i> In-Unit Laundry</div>
+                            <div class="amenity"><i class="fas fa-couch"></i> Furnished Option</div>
+                        </div>
+                    </section>
+
+                    <!-- Floor Plans -->
+                    <section class="floor-plans">
+                        <h2>Floor Plans</h2>
+                        <div class="floor-plan-container">
+                            <img src="https://images.unsplash.com/photo-1583845112203-454c1b0f9a7f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Floor Plan" class="floor-plan-img">
+                            <div class="floor-plan-info">
+                                <h3>Unit 12B Layout</h3>
+                                <ul>
+                                    <li><strong>Total Area:</strong> 1,200 sqft</li>
+                                    <li><strong>Bedrooms:</strong> 2</li>
+                                    <li><strong>Bathrooms:</strong> 2</li>
+                                    <li><strong>Balcony:</strong> 150 sqft</li>
+                                </ul>
+                                <button class="download-plan"><i class="fas fa-download"></i> Download Floor Plan</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Virtual Tour -->
+                    <section class="virtual-tour">
+                        <h2>Virtual Tour</h2>
+                        <div class="tour-embed">
+                            <iframe src="https://www.youtube.com/embed/9xwazD5SyVg" title="Virtual Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <!-- Neighborhood -->
+                    <section class="neighborhood">
+                        <h2>Neighborhood Information</h2>
+                        <div class="neighborhood-content">
+                            <div class="neighborhood-map" id="neighborhood-map"></div>
+                            <div class="neighborhood-info">
+                                <h3>Downtown District</h3>
+                                <p>This vibrant neighborhood offers the best of city living with easy access to shopping, dining, and entertainment options. Walk Score of 98 - a Walker's Paradise.</p>
+                                <div class="neighborhood-stats">
+                                    <div class="stat">
+                                        <div class="stat-value">98</div>
+                                        <div class="stat-label">Walk Score</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">85</div>
+                                        <div class="stat-label">Transit Score</div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-value">72</div>
+                                        <div class="stat-label">Bike Score</div>
+                                    </div>
+                                </div>
+                                <h4>Nearby Places</h4>
+                                <ul class="nearby-places">
+                                    <li><i class="fas fa-utensils"></i> 10+ restaurants within 0.5 miles</li>
+                                    <li><i class="fas fa-shopping-bag"></i> Downtown shopping mall - 0.3 miles</li>
+                                    <li><i class="fas fa-subway"></i> Metro station - 0.1 miles</li>
+                                    <li><i class="fas fa-parking"></i> Public parking garage - 0.2 miles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="right-column">
+                    <!-- Contact Form -->
+                    <section class="contact-agent">
+                        <h2>Contact Agent</h2>
+                        <div class="agent-info">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Sarah Johnson">
+                            <div class="agent-details">
+                                <h3>Sarah Johnson</h3>
+                                <div class="agent-title">Senior Real Estate Agent</div>
+                                <div class="agent-contact">
+                                    <a href="tel:+15551234567"><i class="fas fa-phone"></i> (555) 123-4567</a>
+                                    <a href="mailto:sarah@realestate.com"><i class="fas fa-envelope"></i> Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Your Phone">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Your Message" rows="4" required>I'm interested in the Modern Downtown Apartment at 123 Main St. Please contact me with more information.</textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                        <div class="schedule-tour">
+                            <h3>Schedule a Tour</h3>
+                            <button class="tour-btn"><i class="far fa-calendar-alt"></i> Book Viewing</button>
+                        </div>
+                    </section>
+
+                    <!-- Mortgage Calculator -->
+                    <section class="mortgage-calculator">
+                        <h2>Mortgage Calculator</h2>
+                        <div class="calculator-container">
+                            <div class="calculator-inputs">
+                                <div class="input-group">
+                                    <label for="home-price">Home Price</label>
+                                    <div class="input-with-symbol">
+                                        <span>$</span>
+                                        <input type="number" id="home-price" value="450000">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="down-payment">Down Payment</label>
+                                    <div class="input-with-symbol">
+                                        <span>$</span>
+                                        <input type="number" id="down-payment" value="90000">
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label for="loan-term">Loan Term (years)</label>
+                                    <input type="number" id="loan-term" value="30">
+                                </div>
+                                <div class="input-group">
+                                    <label for="interest-rate">Interest Rate (%)</label>
+                                    <input type="number" id="interest-rate" step="0.01" value="3.5">
+                                </div>
+                                <button class="calculate-btn" id="calculate-btn">Calculate</button>
+                            </div>
+                            <div class="calculator-results">
+                                <div class="result">
+                                    <div class="result-label">Monthly Payment</div>
+                                    <div class="result-value" id="monthly-payment">$1,618</div>
+                                </div>
+                                <div class="result">
+                                    <div class="result-label">Loan Amount</div>
+                                    <div class="result-value" id="loan-amount">$360,000</div>
+                                </div>
+                                <div class="result">
+                                    <div class="result-label">Down Payment %</div>
+                                    <div class="result-value" id="down-payment-percent">20%</div>
+                                </div>
+                                <div class="result">
+                                    <div class="result-label">Total Interest</div>
+                                    <div class="result-value" id="total-interest">$222,480</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Similar Properties -->
+            <section class="similar-properties">
+                <h2>Similar Properties</h2>
+                <div class="similar-listings" id="similar-listings">
+                    <!-- Similar properties will be loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Blaze Reality</h3>
+                    <p>Your trusted partner in finding the perfect property. We connect buyers, sellers, and renters with their ideal real estate solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul>
+                        <li><a href="properties.html?type=house">Houses</a></li>
+                        <li><a href="properties.html?type=apartment">Apartments</a></li>
+                        <li><a href="properties.html?type=villa">Villas</a></li>
+                        <li><a href="properties.html?type=commercial">Commercial</a></li>
+                        <li><a href="properties.html?type=land">Land</a></li>
+                        <li><a href="properties.html?type=luxury">Luxury Homes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone-alt"></i> +254 700 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@blazereality.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Blaze Reality. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.0/lightgallery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="property-details.js"></script>
+</body>
+</html>
