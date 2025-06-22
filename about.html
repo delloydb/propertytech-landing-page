@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Your Real Estate</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+        <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-fire"></i> Blaze Reality
+            </a>
+            
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Account <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="submit-property.html" class="nav-button">Submit Property</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <div class="container">
+            <h1>About Our Company</h1>
+            <p>Discover our story, values, and the team behind your real estate success</p>
+        </div>
+    </header>
+
+    <main class="about-main">
+        <div class="container">
+            <!-- Company History Timeline -->
+            <section class="timeline-section">
+                <h2>Our History</h2>
+                <div class="timeline" id="timeline">
+                    <!-- Timeline items will be loaded here dynamically -->
+                </div>
+            </section>
+
+            <!-- Mission and Values -->
+            <section class="mission-section">
+                <div class="mission-content">
+                    <h2>Our Mission & Values</h2>
+                    <p class="mission-statement">To empower our clients through exceptional real estate services built on integrity, expertise, and personalized care.</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Integrity</h3>
+                            <p>We believe in doing what's right, not just what's easy. Honesty and transparency guide every decision.</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Expertise</h3>
+                            <p>Our team continually invests in education and market research to provide superior service.</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>Client Focus</h3>
+                            <p>Your goals become our priorities. We listen first and tailor solutions to your unique needs.</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Innovation</h3>
+                            <p>We embrace technology and creative strategies to deliver outstanding results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Our Team in Action">
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="team-section">
+                <h2>Meet Our Leadership</h2>
+                <div class="team-grid" id="team-grid">
+                    <!-- Team members will be loaded here dynamically -->
+                </div>
+            </section>
+
+            <!-- Achievements -->
+            <section class="achievements-section">
+                <h2>Our Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-value">250+</div>
+                        <div class="achievement-label">Happy Clients</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-value">$500M+</div>
+                        <div class="achievement-label">Property Sold</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-value">15</div>
+                        <div class="achievement-label">Industry Awards</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-value">98%</div>
+                        <div class="achievement-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Involvement -->
+            <section class="community-section">
+                <div class="community-image">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Community Volunteering">
+                </div>
+                <div class="community-content">
+                    <h2>Community Involvement</h2>
+                    <p>We're proud to be an active part of our community. Each year, we dedicate time and resources to initiatives that make our neighborhoods better places to live and work.</p>
+                    <ul class="community-initiatives">
+                        <li>Annual scholarship for local high school students</li>
+                        <li>Sponsorship of community parks and recreation programs</li>
+                        <li>Monthly food drives for local shelters</li>
+                        <li>Pro bono real estate consulting for non-profits</li>
+                    </ul>
+                    <button class="cta-button">Learn About Our Initiatives</button>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials-section">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonials-carousel" id="testimonials-carousel">
+                    <!-- Testimonials will be loaded here dynamically -->
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-dots"></div>
+                    <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <!-- Why Choose Us -->
+            <section class="comparison-section">
+                <h2>Why Choose Us</h2>
+                <div class="comparison-table">
+                    <div class="comparison-header">
+                        <div class="comparison-feature">Feature</div>
+                        <div class="comparison-us">Our Company</div>
+                        <div class="comparison-them">Typical Brokerage</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Average Days on Market</div>
+                        <div class="comparison-us">22 days</div>
+                        <div class="comparison-them">45 days</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Sale-to-List Price Ratio</div>
+                        <div class="comparison-us">99.3%</div>
+                        <div class="comparison-them">96.7%</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Client Satisfaction</div>
+                        <div class="comparison-us">98%</div>
+                        <div class="comparison-them">89%</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Professional Certifications</div>
+                        <div class="comparison-us">5 per agent</div>
+                        <div class="comparison-them">2 per agent</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-feature">Marketing Technology</div>
+                        <div class="comparison-us">Premium Package</div>
+                        <div class="comparison-them">Basic Package</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Blaze Reality</h3>
+                    <p>Your trusted partner in finding the perfect property. We connect buyers, sellers, and renters with their ideal real estate solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul>
+                        <li><a href="properties.html?type=house">Houses</a></li>
+                        <li><a href="properties.html?type=apartment">Apartments</a></li>
+                        <li><a href="properties.html?type=villa">Villas</a></li>
+                        <li><a href="properties.html?type=commercial">Commercial</a></li>
+                        <li><a href="properties.html?type=land">Land</a></li>
+                        <li><a href="properties.html?type=luxury">Luxury Homes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone-alt"></i> +254 700 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@blazereality.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Blaze Reality. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
