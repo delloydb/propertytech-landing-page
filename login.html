@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Your Real Estate</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Welcome Back</h1>
+            <p>Sign in to access your account and personalized recommendations</p>
+        </div>
+
+        <div class="login-main" id="login-main">
+            <!-- Main Login Form -->
+            <form class="login-form" id="email-login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password" id="show-forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+                
+                <div class="divider">
+                    <span>or continue with</span>
+                </div>
+                
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                        Google
+                    </button>
+                    <button type="button" class="social-btn facebook-btn">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                </div>
+                
+                <div class="otp-option">
+                    <a href="#" id="show-otp-login">Or sign in with OTP</a>
+                </div>
+                
+                <div class="register-link">
+                    Don't have an account? <a href="register.html">Register now</a>
+                </div>
+            </form>
+
+            <!-- Forgot Password Form (hidden by default) -->
+            <form class="forgot-password-form" id="forgot-password-form" style="display: none;">
+                <h2>Reset Your Password</h2>
+                <p>Enter your email address and we'll send you a link to reset your password.</p>
+                
+                <div class="form-group">
+                    <label for="reset-email">Email Address</label>
+                    <input type="email" id="reset-email" required placeholder="Enter your email">
+                </div>
+                
+                <button type="submit" class="reset-btn">Send Reset Link</button>
+                
+                <div class="back-to-login">
+                    <a href="#" id="back-to-login-from-forgot"><i class="fas fa-arrow-left"></i> Back to login</a>
+                </div>
+            </form>
+
+            <!-- OTP Login Form (hidden by default) -->
+            <form class="otp-login-form" id="otp-login-form" style="display: none;">
+                <h2>OTP Verification</h2>
+                <p>We'll send a one-time password to your mobile number</p>
+                
+                <div class="form-group">
+                    <label for="phone">Mobile Number</label>
+                    <div class="phone-input">
+                        <select id="country-code">
+                            <option value="+1">+1 (US)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <option value="+91">+91 (IN)</option>
+                            <option value="+61">+61 (AU)</option>
+                        </select>
+                        <input type="tel" id="phone" required placeholder="Enter your mobile number">
+                    </div>
+                </div>
+                
+                <button type="button" class="send-otp-btn" id="send-otp-btn">Send OTP</button>
+                
+                <div class="otp-input-group" id="otp-input-group" style="display: none;">
+                    <label for="otp">Enter OTP</label>
+                    <div class="otp-inputs">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                    </div>
+                    <div class="otp-timer" id="otp-timer">
+                        Resend OTP in <span id="countdown">60</span> seconds
+                    </div>
+                    <button type="submit" class="verify-otp-btn">Verify & Sign In</button>
+                </div>
+                
+                <div class="back-to-login">
+                    <a href="#" id="back-to-login-from-otp"><i class="fas fa-arrow-left"></i> Back to login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Agents | Your Real Estate</title>
+    <link rel="stylesheet" href="agents.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+        <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-fire"></i> Blaze Reality
+            </a>
+            
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#">Account <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a href="submit-property.html" class="nav-button">Submit Property</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="page-header">
+        <div class="container">
+            <h1>Meet Our Agents</h1>
+            <nav class="breadcrumbs">
+                <a href="index.html">Home</a> &gt; <span>Agents</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="agents-main">
+        <div class="container">
+            <!-- Introduction -->
+            <section class="introduction">
+                <h2>Professional Real Estate Experts</h2>
+                <p>Our team of dedicated agents brings years of experience, local market knowledge, and personalized service to help you navigate your real estate journey. Whether buying, selling, or investing, we're here to guide you every step of the way.</p>
+            </section>
+
+            <!-- Search and Filter -->
+            <section class="agent-search">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search agents by name or location...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <select id="experience-filter">
+                        <option value="">All Experience Levels</option>
+                        <option value="5">5+ Years</option>
+                        <option value="10">10+ Years</option>
+                        <option value="15">15+ Years</option>
+                    </select>
+                    <select id="specialty-filter">
+                        <option value="">All Specialties</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="investment">Investment</option>
+                    </select>
+                    <select id="location-filter">
+                        <option value="">All Locations</option>
+                        <option value="downtown">Downtown</option>
+                        <option value="suburbs">Suburbs</option>
+                        <option value="coastal">Coastal</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Performance Metrics -->
+            <section class="performance-metrics">
+                <div class="metric-card">
+                    <div class="metric-value">$250M+</div>
+                    <div class="metric-label">Total Sales</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">500+</div>
+                    <div class="metric-label">Happy Clients</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">15+</div>
+                    <div class="metric-label">Years Experience</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">98%</div>
+                    <div class="metric-label">Client Satisfaction</div>
+                </div>
+            </section>
+
+            <!-- Agent Grid -->
+            <section class="agent-grid" id="agent-grid">
+                <!-- Agents will be loaded here dynamically -->
+            </section>
+
+            <!-- Join Team CTA -->
+            <section class="join-team">
+                <div class="join-content">
+                    <h2>Join Our Team</h2>
+                    <p>Are you a passionate real estate professional looking to take your career to the next level? We're always looking for talented agents to join our growing team.</p>
+                    <div class="benefits">
+                        <div class="benefit">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Competitive commission structure</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-users"></i>
+                            <span>Lead generation support</span>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Ongoing training</span>
+                        </div>
+                    </div>
+                    <button class="cta-button">Apply Now</button>
+                </div>
+                <div class="join-image">
+                    <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Join Our Team">
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="testimonials">
+                <h2>What Our Clients Say</h2>
+                <div class="testimonial-carousel" id="testimonial-carousel">
+                    <!-- Testimonials will be loaded here dynamically -->
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-dots"></div>
+                    <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Blaze Reality</h3>
+                    <p>Your trusted partner in finding the perfect property. We connect buyers, sellers, and renters with their ideal real estate solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul>
+                        <li><a href="properties.html?type=house">Houses</a></li>
+                        <li><a href="properties.html?type=apartment">Apartments</a></li>
+                        <li><a href="properties.html?type=villa">Villas</a></li>
+                        <li><a href="properties.html?type=commercial">Commercial</a></li>
+                        <li><a href="properties.html?type=land">Land</a></li>
+                        <li><a href="properties.html?type=luxury">Luxury Homes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave, Nairobi, Kenya</li>
+                        <li><i class="fas fa-phone-alt"></i> +254 700 123 456</li>
+                        <li><i class="fas fa-envelope"></i> info@blazereality.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Blaze Reality. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="agents.js"></script>
+</body>
+</html>

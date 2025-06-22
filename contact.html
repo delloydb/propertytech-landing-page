@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Your Real Estate</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We're here to help with all your real estate needs</p>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <div class="container">
+            <!-- Contact Form Section -->
+            <section class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name*</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject*</label>
+                        <select id="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="buying">Buying a Property</option>
+                            <option value="selling">Selling a Property</option>
+                            <option value="renting">Renting a Property</option>
+                            <option value="careers">Careers</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message*</label>
+                        <textarea id="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+
+            <!-- Contact Info Section -->
+            <section class="contact-info-section">
+                <h2>Our Offices</h2>
+                <div class="offices-grid">
+                    <!-- Office 1 -->
+                    <div class="office-card">
+                        <div class="office-map" id="map-downtown"></div>
+                        <div class="office-details">
+                            <h3>Downtown Office</h3>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Realtor Ave, Suite 200, Downtown</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>(555) 123-4567</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>downtown@realestate.com</span>
+                            </div>
+                            <div class="office-hours">
+                                <h4>Office Hours:</h4>
+                                <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                                <p>Sat: 10:00 AM - 4:00 PM</p>
+                                <p>Sun: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office 2 -->
+                    <div class="office-card">
+                        <div class="office-map" id="map-suburbs"></div>
+                        <div class="office-details">
+                            <h3>Suburban Office</h3>
+                            <div class="contact-method">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>456 Main Street, Suburbia</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>(555) 765-4321</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>suburbs@realestate.com</span>
+                            </div>
+                            <div class="office-hours">
+                                <h4>Office Hours:</h4>
+                                <p>Mon-Fri: 9:00 AM - 5:00 PM</p>
+                                <p>Sat: 10:00 AM - 2:00 PM</p>
+                                <p>Sun: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Department Contacts -->
+            <section class="departments-section">
+                <h2>Department Contacts</h2>
+                <div class="departments-grid">
+                    <div class="department-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Sales</h3>
+                        <p>For buying or selling properties</p>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 111-2222</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@realestate.com</span>
+                        </div>
+                    </div>
+                    <div class="department-card">
+                        <i class="fas fa-key"></i>
+                        <h3>Rentals</h3>
+                        <p>For rental properties and leases</p>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 222-3333</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>rentals@realestate.com</span>
+                        </div>
+                    </div>
+                    <div class="department-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Agent Services</h3>
+                        <p>For agent inquiries and support</p>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 333-4444</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>agents@realestate.com</span>
+                        </div>
+                    </div>
+                    <div class="department-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Customer Support</h3>
+                        <p>For general questions and support</p>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <span>(555) 444-5555</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@realestate.com</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-accordion" id="faq-accordion">
+                    <!-- FAQ items will be loaded here dynamically -->
+                </div>
+            </section>
+
+            <!-- Social Media Section -->
+            <section class="social-section">
+                <h2>Connect With Us</h2>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-link twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
